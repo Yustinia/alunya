@@ -1,0 +1,62 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+    "languages": {
+        "Rust": {
+            "formatter": {
+                "external": {
+                    "command": "rustfmt"
+                }
+            },
+            "format_on_save": "on",
+            "language_servers": [
+                "rust-analyzer"
+            ],
+        },
+        "Go": {
+            "formatter": {
+                "external": {
+                    "command": "gofumpt"
+                }
+            },
+            "format_on_save": "on",
+            "language_servers": [
+                "gopls"
+            ],
+        },
+        "HTML": {
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            },
+            "format_on_save": "on",
+            "language_servers": [
+                "vscode-html-language-server"
+            ],
+        }
+    },
+    "lsp": {
+        "vscode-html-language-server": {
+            "binary": {
+                "path": "vscode-html-language-server"
+            }
+        },
+        "rust-analyzer": {
+            "binary": {
+                "path": "rust-analyzer"
+            }
+        },
+        "gopls": {
+            "binary": {
+                "path": "gopls"
+            }
+        }
+    }
+}
